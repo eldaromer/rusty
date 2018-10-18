@@ -4,6 +4,9 @@
   "main": "server.js",
   "author": "Omer Eldar <eldaromer@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "start": "lite-server"
+  },
   "dependencies": {
     "@koa/cors": "^2.2.2",
     "koa": "^2.5.3",
@@ -11,5 +14,10 @@
     "koa-logger": "^3.2.0",
     "koa-router": "^7.4.0",
     "koa-static": "^5.0.0"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.26.3",
+    "gulp": "^3.9.1",
+    "gulp-nodemon": "^2.2.1"
   }
 }
