@@ -10,7 +10,7 @@ const serve = require('koa-static');
 
 const app = new Koa();
 
-const router = require('./routes/routes');
+const router = require('./backend/routes/routes');
 
 app.use(cors());
 app.use(logger());
@@ -28,7 +28,7 @@ io.on('connection', sock => {
     io.clients((err, clients) => {
         if (err) throw err;
         console.log(clients);
-    })
+    });
 });
 
 server.listen(3000, () => {
