@@ -1,8 +1,9 @@
 require('dotenv').config();
+const errorHandler = require('./backend/error/errorHandler.middleware').errorHandlerMiddleware;
+
 //Koa Imports
 
 const Koa = require('koa');
-const Router = require('koa-router');
 const logger = require('koa-logger');
 const bodyParser = require('koa-bodyparser');
 const cors = require('@koa/cors');
@@ -12,6 +13,7 @@ const app = new Koa();
 
 const router = require('./backend/routes/routes');
 
+app.use(errorHandler);
 app.use(cors());
 app.use(logger());
 app.use(bodyParser());
