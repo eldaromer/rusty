@@ -5,7 +5,7 @@
   "author": "Omer Eldar <eldaromer@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "lite-server"
+    "start": "gulp"
   },
   "dependencies": {
     "@koa/cors": "^2.2.2",

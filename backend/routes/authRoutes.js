@@ -8,6 +8,7 @@ const auth = require('../auth');
 router.prefix('/auth');
 
 router.post('/signup', async(ctx, next) => {
+
     let body = ctx.request.body;
 
     if (!body.username) throw new error(422, "Missing user name");
@@ -24,6 +25,9 @@ router.post('/signup', async(ctx, next) => {
 });
 
 router.post('/login', async (ctx, next) => {
+
+    console.log(ctx.cookies.get('access_token'));
+
 
     let body = ctx.request.body;
 
