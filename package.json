@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "concurrently \"gulp\" \"npm run serve\"",
+    "serve": "ng serve --port 3333 --proxy-config proxy.config.json",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
@@ -49,6 +50,7 @@
     "@types/node": "~8.9.4",
     "browser-sync": "^2.26.3",
     "codelyzer": "~4.5.0",
+    "concurrently": "^4.1.0",
     "gulp": "^3.9.1",
     "gulp-nodemon": "^2.2.1",
     "jasmine-core": "~2.99.1",
