@@ -1,5 +1,5 @@
 require('dotenv').config();
-const errorHandler = require('./backend/error/errorHandler.middleware').errorHandlerMiddleware;
+const errorHandler = require('./error/errorHandler.middleware').errorHandlerMiddleware;
 
 //Koa Imports
 
@@ -8,10 +8,11 @@ const logger = require('koa-logger');
 const bodyParser = require('koa-bodyparser');
 const cors = require('@koa/cors');
 const serve = require('koa-static');
+const angularProxy = require('koa-angular-proxy');
 
 const app = new Koa();
 
-const router = require('./backend/routes/routes');
+const router = require('./routes/routes');
 
 app.use(errorHandler);
 app.use(cors());
@@ -19,7 +20,7 @@ app.use(logger());
 app.use(bodyParser());
 app.use(router());
 
-app.use(serve('./static'));
+app.use(angularProxy('./dist'));
 
 //Socket.io Setup
 

@@ -11,10 +11,10 @@ gulp.task('browser-sync', ['nodemon'], () => {
     });
 });
 
-gulp.task('nodemon', (callback) => {
+gulp.task('default', (callback) => {
     let called = false;
     return nodemon({
-        script: 'server.js',
+        script: 'backend/server.js',
         ignore: [
             'node_modules/',
             'gulpfile.js'
@@ -31,8 +31,4 @@ gulp.task('nodemon', (callback) => {
                 reload({ stream: false });
             }, 1000);
         });
-});
-
-gulp.task('default', ['browser-sync'], () => {
-    gulp.watch(['static/**/*.*'], reload);
 });

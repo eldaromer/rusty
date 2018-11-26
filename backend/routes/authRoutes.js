@@ -3,7 +3,7 @@ const router =  new Router();
 const user = require('../db/userDB');
 const error = require('../error/Exception').Exception;
 const bcrypt = require('bcrypt');
-const auth = require('../auth');
+const auth = require('../auth/auth');
 
 router.prefix('/auth');
 
