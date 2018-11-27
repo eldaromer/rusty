@@ -9,6 +9,7 @@ const bodyParser = require('koa-bodyparser');
 const cors = require('@koa/cors');
 const serve = require('koa-static');
 const angularProxy = require('koa-angular-proxy');
+const connection = require('./connection/connection');
 
 const app = new Koa();
 
@@ -27,11 +28,23 @@ app.use(angularProxy('./dist'));
 let server = require('http').createServer(app.callback());
 let io = require('socket.io')(server);
 
+let connections = {};
+
 io.on('connection', sock => {
     io.clients((err, clients) => {
         if (err) throw err;
         console.log(clients);
     });
+
+    sock.on('join', room => {
+      if (connections[room]) {
+        connections[room].connect(sock)
+      } else {
+        conn = new connection(room, io);
+        conn.connect(sock);
+        connections[room] = conn;
+      }
+    })
 });
 
 server.listen(3000, () => {

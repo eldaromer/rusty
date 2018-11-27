@@ -109,6 +109,15 @@
   dependencies:
     tslib "^1.9.0"
 
+"@angular/cdk@^7.1.0":
+  version "7.1.0"
+  resolved "https://registry.yarnpkg.com/@angular/cdk/-/cdk-7.1.0.tgz#7e5c3e3631947ef91413a83997ec4edec92cdd1c"
+  integrity sha512-dY740pKcIRtKr6n6NomrgqfdEj988urTZ9I/bfJjxF5fdhnSjyhEvDlB55EHsrF+bTTZbZXRmv7AwOQ9GJnD9w==
+  dependencies:
+    tslib "^1.7.1"
+  optionalDependencies:
+    parse5 "^5.0.0"
+
 "@angular/cli@~7.0.6":
   version "7.0.6"
   resolved "https://registry.yarnpkg.com/@angular/cli/-/cli-7.0.6.tgz#f97bc9ca92785c7ce2e5f20819c48265a1da5b53"
@@ -181,6 +190,13 @@
   version "7.0.4"
   resolved "https://registry.yarnpkg.com/@angular/language-service/-/language-service-7.0.4.tgz#db221f183725ff54c1188aec7acb2948e29f4c50"
   integrity sha512-CuJ2Ii97sNoN1HOZOLxG1lEHsQFi8K/RSB/k2suWPKzdM53ldSkKoYRac38zW/uqNABYItgvxb7w0Vi7HhxLsg==
+
+"@angular/material@^7.1.0":
+  version "7.1.0"
+  resolved "https://registry.yarnpkg.com/@angular/material/-/material-7.1.0.tgz#441f2d03a97a1fa35546b61dcde86db34f0f5efc"
+  integrity sha512-bgotNpSfGLjNZ1AcTyhs6XS7trF4I7UHwQmfa0l8y3Gf9plwErPDfQe2XqnayRyG9nTwHj9f1lQ45X5mr3/0/A==
+  dependencies:
+    tslib "^1.7.1"
 
 "@angular/platform-browser-dynamic@~7.0.0":
   version "7.0.4"
@@ -476,6 +492,11 @@
   dependencies:
     "@types/express-serve-static-core" "*"
     "@types/mime" "*"
+
+"@types/socket.io-client@^1.4.32":
+  version "1.4.32"
+  resolved "https://registry.yarnpkg.com/@types/socket.io-client/-/socket.io-client-1.4.32.tgz#988a65a0386c274b1c22a55377fab6a30789ac14"
+  integrity sha512-Vs55Kq8F+OWvy1RLA31rT+cAyemzgm0EWNeax6BWF8H7QiiOYMJIdcwSDdm5LVgfEkoepsWkS+40+WNb7BUMbg==
 
 "@webassemblyjs/ast@1.7.6":
   version "1.7.6"
@@ -6902,6 +6923,11 @@ parse5@4.0.0:
   resolved "https://registry.yarnpkg.com/parse5/-/parse5-4.0.0.tgz#6d78656e3da8d78b4ec0b906f7c08ef1dfe3f608"
   integrity sha512-VrZ7eOd3T1Fk4XWNXMgiGBK/z0MG48BWG2uQNU4I72fkQuKUTZpl+u9k+CxEG0twMVzSmXEEz12z5Fnw1jIQFA==
 
+parse5@^5.0.0:
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/parse5/-/parse5-5.1.0.tgz#c59341c9723f414c452975564c7c00a68d58acd2"
+  integrity sha512-fxNG2sQjHvlVAYmzBZS9YlDp6PTSSDwa98vkD4QgVDDCAo84z5X1t5XyJQ62ImdLXx5NdIIfihey6xpum9/gRQ==
+
 parseqs@0.0.5:
   version "0.0.5"
   resolved "https://registry.yarnpkg.com/parseqs/-/parseqs-0.0.5.tgz#d5208a3738e46766e291ba2ea173684921a8b89d"
@@ -8270,7 +8296,7 @@ socket.io-adapter@~1.1.0:
   resolved "https://registry.yarnpkg.com/socket.io-adapter/-/socket.io-adapter-1.1.1.tgz#2a805e8a14d6372124dd9159ad4502f8cb07f06b"
   integrity sha1-KoBeihTWNyEk3ZFZrUUC+MsH8Gs=
 
-socket.io-client@2.1.1, socket.io-client@^2.0.4:
+socket.io-client@2.1.1, socket.io-client@^2.0.4, socket.io-client@^2.1.1:
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/socket.io-client/-/socket.io-client-2.1.1.tgz#dcb38103436ab4578ddb026638ae2f21b623671f"
   integrity sha512-jxnFyhAuFxYfjqIgduQlhzqTcOEQSn+OHKVfAxWaNWa7ecP7xSNk2Dx/3UEsDcY7NcFafxvNvKPmmO7HTwTxGQ==
@@ -9089,7 +9115,7 @@ ts-node@~7.0.0:
     source-map-support "^0.5.6"
     yn "^2.0.0"
 
-tslib@^1.8.0, tslib@^1.8.1, tslib@^1.9.0:
+tslib@^1.7.1, tslib@^1.8.0, tslib@^1.8.1, tslib@^1.9.0:
   version "1.9.3"
   resolved "https://registry.yarnpkg.com/tslib/-/tslib-1.9.3.tgz#d7e4dd79245d85428c4d7e4822a79917954ca286"
   integrity sha512-4krF8scpejhaOgqzBEcGM7yDIEfi0/8+8zDRZhNZZ2kjmHJ4hv3zCbQWxoJGz1iw5U0Jl0nma13xzHXcncMavQ==
